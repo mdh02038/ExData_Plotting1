@@ -1,5 +1,5 @@
 ## 
-## plot1.R
+## plot2.R
 ##
 
 ## declare filenames
@@ -20,11 +20,12 @@ select2 <- as.Date(data$Date,format="%d/%m/%Y")<=as.Date("2007-02-02")
 subData <- data[select1 & select2,]
 
 ## plot data and convert to a png file
-hist( 
-  as.numeric(subData$Global_active_power),
-  col="red",
-  xlab="Global Active Power (kilowatts)", 
-  main="Global Active Power"
+plot( 
+  strptime( paste(subdData$Time, subdData$Date), format="%H:%M:%S %d/%m/%Y"), 
+  as.numeric(subdData$Global_active_power), 
+  type='l',
+  ylab="Global Active Power (kilowatts)", 
+  xlab=""
 )
-dev.copy(png, file="plot1.png")
+dev.copy(png, file="plot2.png")
 dev.off()
