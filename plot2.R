@@ -21,8 +21,8 @@ subData <- data[select1 & select2,]
 
 ## plot data and convert to a png file
 plot( 
-  strptime( paste(subdData$Time, subdData$Date), format="%H:%M:%S %d/%m/%Y"), 
-  as.numeric(subdData$Global_active_power), 
+  strptime( paste(subData$Time, subData$Date), format="%H:%M:%S %d/%m/%Y"), 
+  as.numeric(subData$Global_active_power), 
   type='l',
   ylab="Global Active Power (kilowatts)", 
   xlab=""

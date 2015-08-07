@@ -93,3 +93,4 @@ plot(
 
 
 dev.off()
+par(mfrow = c(1,1))

@@ -23,22 +23,22 @@ subData <- data[select1 & select2,]
 
 png( file="plot3.png" )
 plot( 
-  strptime( paste(subdData$Time, subdData$Date), format="%H:%M:%S %d/%m/%Y"), 
-  as.numeric(subdData$Sub_metering_1), 
+  strptime( paste(subData$Time, subData$Date), format="%H:%M:%S %d/%m/%Y"), 
+  as.numeric(subData$Sub_metering_1), 
   type='l',
   col='black',
   ylab="Energy sub metering", 
   xlab=""
 )
 points( 
-  strptime( paste(subdData$Time, subdData$Date), format="%H:%M:%S %d/%m/%Y"), 
-  as.numeric(subdData$Sub_metering_2), 
+  strptime( paste(subData$Time, subData$Date), format="%H:%M:%S %d/%m/%Y"), 
+  as.numeric(subData$Sub_metering_2), 
   type='l',
   col='red'
 )
 points( 
-  strptime( paste(subdData$Time, subdData$Date), format="%H:%M:%S %d/%m/%Y"), 
-  as.numeric(subdData$Sub_metering_3), 
+  strptime( paste(subData$Time, subData$Date), format="%H:%M:%S %d/%m/%Y"), 
+  as.numeric(subData$Sub_metering_3), 
   type='l',
   col='blue'
 )
