@@ -1,5 +1,5 @@
 ## 
-## plot2.R
+## plot3.R
 ##
 
 ## declare filenames
